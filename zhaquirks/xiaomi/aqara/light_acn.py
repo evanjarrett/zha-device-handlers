@@ -64,8 +64,10 @@ class LumiClusterLight(XiaomiAqaraE1Cluster):
 
     attributes = XiaomiAqaraE1Cluster.attributes.copy()
     attributes[0x0517] = ZCLAttributeDef(
-        id=0x0517, type=LumiPowerOnBehaviorMode, is_manufacturer_specific=True,
-        name="power_on_behavior"
+        id=0x0517,
+        type=LumiPowerOnBehaviorMode,
+        is_manufacturer_specific=True,
+        name="power_on_behavior",
     )
 
 
@@ -85,18 +87,18 @@ class LumiLightAcn003(XiaomiCustomDevice):
                 PROFILE_ID: zha.PROFILE_ID,
                 DEVICE_TYPE: zha.DeviceType.COLOR_DIMMABLE_LIGHT,
                 INPUT_CLUSTERS: [
-                    BasicCluster.cluster_id,  # 0x0000
-                    Identify.cluster_id,  # 0x0003
-                    Groups.cluster_id,  # 0x0004
-                    Scenes.cluster_id,  # 0x0005
-                    OnOff.cluster_id,  # 0x0006
-                    LevelControl.cluster_id,  # 0x0008
-                    Color.cluster_id,  # 0x0300
-                    OppleClusterLight.cluster_id,  # 0xFCC0 - manufacturer specific
+                    BasicCluster.cluster_id,
+                    Identify.cluster_id,
+                    Groups.cluster_id,
+                    Scenes.cluster_id,
+                    OnOff.cluster_id,
+                    LevelControl.cluster_id,
+                    Color.cluster_id,
+                    OppleClusterLight.cluster_id,
                 ],
                 OUTPUT_CLUSTERS: [
-                    Time.cluster_id,  # 0x000A
-                    Ota.cluster_id,  # 0x0019
+                    Time.cluster_id,
+                    Ota.cluster_id,
                 ],
             }
         },
@@ -108,17 +110,17 @@ class LumiLightAcn003(XiaomiCustomDevice):
                 DEVICE_TYPE: zha.DeviceType.COLOR_DIMMABLE_LIGHT,
                 INPUT_CLUSTERS: [
                     BasicCluster,
-                    Identify.cluster_id,  # 0x0003
-                    Groups.cluster_id,  # 0x0004
-                    Scenes.cluster_id,  # 0x0005
-                    OnOff.cluster_id,  # 0x0006
-                    LevelControl.cluster_id,  # 0x0008
-                    Color.cluster_id,  # 0x0300
+                    Identify.cluster_id,
+                    Groups.cluster_id,
+                    Scenes.cluster_id,
+                    OnOff.cluster_id,
+                    LevelControl.cluster_id,
+                    Color.cluster_id,
                     OppleClusterLight,
                 ],
                 OUTPUT_CLUSTERS: [
-                    Time.cluster_id,  # 0x000A
-                    Ota.cluster_id,  # 0x0019
+                    Time.cluster_id,
+                    Ota.cluster_id,
                 ],
             }
         }
@@ -143,32 +145,32 @@ class LumiLightAcn014(XiaomiCustomDevice):
                 PROFILE_ID: zha.PROFILE_ID,
                 DEVICE_TYPE: zha.DeviceType.COLOR_TEMPERATURE_LIGHT,
                 INPUT_CLUSTERS: [
-                    BasicCluster.cluster_id,  # 0x0000
-                    DeviceTemperature.cluster_id,  # 0x0002
-                    Identify.cluster_id,  # 0x0003
-                    Groups.cluster_id,  # 0x0004
-                    Scenes.cluster_id,  # 0x0005
-                    OnOff.cluster_id,  # 0x0006
-                    LevelControl.cluster_id,  # 0x0008
-                    Alarms.cluster_id,  # 0x0009
-                    AnalogInput.cluster_id,  # 0x000C
-                    BinaryInput.cluster_id,  # 0x000F
-                    MultistateInput.cluster_id,  # 0x0012
-                    Color.cluster_id,  # 0x0300
-                    Metering.cluster_id,  # 0x0702
-                    ElectricalMeasurement.cluster_id,  # 0x0B04
-                    OppleClusterLight.cluster_id,  # 0xFCC0 - manufacturer specific
+                    BasicCluster.cluster_id,
+                    DeviceTemperature.cluster_id,
+                    Identify.cluster_id,
+                    Groups.cluster_id,
+                    Scenes.cluster_id,
+                    OnOff.cluster_id,
+                    LevelControl.cluster_id,
+                    Alarms.cluster_id,
+                    AnalogInput.cluster_id,
+                    BinaryInput.cluster_id,
+                    MultistateInput.cluster_id,
+                    Color.cluster_id,
+                    Metering.cluster_id,
+                    ElectricalMeasurement.cluster_id,
+                    OppleClusterLight.cluster_id,
                 ],
                 OUTPUT_CLUSTERS: [
-                    Time.cluster_id,  # 0x000A
-                    Ota.cluster_id,  # 0x0019
+                    Time.cluster_id,
+                    Ota.cluster_id,
                 ],
             },
             21: {
                 PROFILE_ID: zha.PROFILE_ID,
                 DEVICE_TYPE: zha.DeviceType.COLOR_TEMPERATURE_LIGHT,
                 INPUT_CLUSTERS: [
-                    AnalogInput.cluster_id,  # 0x000C
+                    AnalogInput.cluster_id,
                 ],
                 OUTPUT_CLUSTERS: [],
             },
@@ -176,7 +178,7 @@ class LumiLightAcn014(XiaomiCustomDevice):
                 PROFILE_ID: zha.PROFILE_ID,
                 DEVICE_TYPE: zha.DeviceType.COLOR_TEMPERATURE_LIGHT,
                 INPUT_CLUSTERS: [
-                    AnalogInput.cluster_id,  # 0x000C
+                    AnalogInput.cluster_id,
                 ],
                 OUTPUT_CLUSTERS: [],
             },
@@ -185,7 +187,7 @@ class LumiLightAcn014(XiaomiCustomDevice):
                 DEVICE_TYPE: zgp.DeviceType.PROXY_BASIC,
                 INPUT_CLUSTERS: [],
                 OUTPUT_CLUSTERS: [
-                    GreenPowerProxy.cluster_id,  # 0x0021
+                    GreenPowerProxy.cluster_id,
                 ],
             },
         },
@@ -196,22 +198,22 @@ class LumiLightAcn014(XiaomiCustomDevice):
                 PROFILE_ID: zha.PROFILE_ID,
                 DEVICE_TYPE: zha.DeviceType.COLOR_TEMPERATURE_LIGHT,
                 INPUT_CLUSTERS: [
-                    BasicCluster,  # 0x0000
-                    DeviceTemperature.cluster_id,  # 0x0002
-                    Identify.cluster_id,  # 0x0003
-                    Groups.cluster_id,  # 0x0004
-                    Scenes.cluster_id,  # 0x0005
-                    OnOff.cluster_id,  # 0x0006
-                    LevelControl.cluster_id,  # 0x0008
-                    Alarms.cluster_id,  # 0x0009
-                    AnalogInput.cluster_id,  # 0x000C
-                    MultistateInput.cluster_id,  # 0x0012
-                    Color.cluster_id,  # 0x0300
-                    OppleClusterLight,  # 0xFCC0 - manufacturer specific
+                    BasicCluster,
+                    DeviceTemperature.cluster_id,
+                    Identify.cluster_id,
+                    Groups.cluster_id,
+                    Scenes.cluster_id,
+                    OnOff.cluster_id,
+                    LevelControl.cluster_id,
+                    Alarms.cluster_id,
+                    AnalogInput.cluster_id,
+                    MultistateInput.cluster_id,
+                    Color.cluster_id,
+                    OppleClusterLight,
                 ],
                 OUTPUT_CLUSTERS: [
-                    Time.cluster_id,  # 0x000A
-                    Ota.cluster_id,  # 0x0019
+                    Time.cluster_id,
+                    Ota.cluster_id,
                 ],
             },
             242: {
@@ -219,7 +221,7 @@ class LumiLightAcn014(XiaomiCustomDevice):
                 DEVICE_TYPE: zgp.DeviceType.PROXY_BASIC,
                 INPUT_CLUSTERS: [],
                 OUTPUT_CLUSTERS: [
-                    GreenPowerProxy.cluster_id,  # 0x0021
+                    GreenPowerProxy.cluster_id,
                 ],
             },
         }
@@ -236,41 +238,43 @@ class LumiLightAcn032(XiaomiCustomDevice):
     """
 
     signature = {
-        MODELS_INFO: [("Aqara", "lumi.light.acn032"), ],
+        MODELS_INFO: [
+            ("Aqara", "lumi.light.acn032"),
+        ],
         ENDPOINTS: {
             1: {
                 PROFILE_ID: zha.PROFILE_ID,
                 DEVICE_TYPE: zha.DeviceType.COLOR_DIMMABLE_LIGHT,
                 INPUT_CLUSTERS: [
-                    BasicCluster.cluster_id,  # 0x0000
-                    Identify.cluster_id,  # 0x0003
-                    Groups.cluster_id,  # 0x0004
-                    Scenes.cluster_id,  # 0x0005
-                    OnOff.cluster_id,  # 0x0006
-                    LevelControl.cluster_id,  # 0x0008
-                    Color.cluster_id,  # 0x0300
-                    LumiClusterLight.cluster_id,  # 0xFCC0 - manufacturer specific
+                    BasicCluster.cluster_id,
+                    Identify.cluster_id,
+                    Groups.cluster_id,
+                    Scenes.cluster_id,
+                    OnOff.cluster_id,
+                    LevelControl.cluster_id,
+                    Color.cluster_id,
+                    LumiClusterLight.cluster_id,
                 ],
                 OUTPUT_CLUSTERS: [
-                    Time.cluster_id,  # 0x000A
-                    Ota.cluster_id,  # 0x0019
+                    Time.cluster_id,
+                    Ota.cluster_id,
                 ],
             },
             2: {
                 PROFILE_ID: zha.PROFILE_ID,
                 DEVICE_TYPE: zha.DeviceType.COLOR_DIMMABLE_LIGHT,
                 INPUT_CLUSTERS: [
-                    Identify.cluster_id,  # 0x0003
-                    Groups.cluster_id,  # 0x0004
-                    Scenes.cluster_id,  # 0x0005
-                    OnOff.cluster_id,  # 0x0006
-                    LevelControl.cluster_id,  # 0x0008
-                    Color.cluster_id,  # 0x0300
-                    LumiClusterLight.cluster_id,  # 0xFCC0 - manufacturer specific
+                    Identify.cluster_id,
+                    Groups.cluster_id,
+                    Scenes.cluster_id,
+                    OnOff.cluster_id,
+                    LevelControl.cluster_id,
+                    Color.cluster_id,
+                    LumiClusterLight.cluster_id,
                 ],
                 OUTPUT_CLUSTERS: [],
-            }
-        }
+            },
+        },
     }
     replacement = {
         ENDPOINTS: {
@@ -279,32 +283,32 @@ class LumiLightAcn032(XiaomiCustomDevice):
                 DEVICE_TYPE: zha.DeviceType.COLOR_DIMMABLE_LIGHT,
                 INPUT_CLUSTERS: [
                     BasicCluster.cluster_id,
-                    Identify.cluster_id,  # 0x0003
-                    Groups.cluster_id,  # 0x0004
-                    Scenes.cluster_id,  # 0x0005
-                    OnOff.cluster_id,  # 0x0006
-                    LevelControl.cluster_id,  # 0x0008
-                    Color.cluster_id,  # 0x0300
+                    Identify.cluster_id,
+                    Groups.cluster_id,
+                    Scenes.cluster_id,
+                    OnOff.cluster_id,
+                    LevelControl.cluster_id,
+                    Color.cluster_id,
                     LumiClusterLight,
                 ],
                 OUTPUT_CLUSTERS: [
-                    Time.cluster_id,  # 0x000A
-                    Ota.cluster_id,  # 0x0019
+                    Time.cluster_id,
+                    Ota.cluster_id,
                 ],
             },
             2: {
                 PROFILE_ID: zha.PROFILE_ID,
                 DEVICE_TYPE: zha.DeviceType.COLOR_DIMMABLE_LIGHT,
                 INPUT_CLUSTERS: [
-                    Identify.cluster_id,  # 0x0003
-                    Groups.cluster_id,  # 0x0004
-                    Scenes.cluster_id,  # 0x0005
-                    OnOff.cluster_id,  # 0x0006
-                    LevelControl.cluster_id,  # 0x0008
-                    Color.cluster_id,  # 0x0300
-                    LumiClusterLight.cluster_id,  # 0xFCC0 - manufacturer specific
+                    Identify.cluster_id,
+                    Groups.cluster_id,
+                    Scenes.cluster_id,
+                    OnOff.cluster_id,
+                    LevelControl.cluster_id,
+                    Color.cluster_id,
+                    LumiClusterLight.cluster_id,
                 ],
                 OUTPUT_CLUSTERS: [],
-            }
+            },
         }
     }
